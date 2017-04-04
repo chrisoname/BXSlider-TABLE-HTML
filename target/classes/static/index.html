@@ -50,10 +50,7 @@ var obj = JSON.parse(data);
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-
-
-
-
+<!-- CONTAINER 2 SIN EL SCRIPT DE JAVASCRIPT -->
 
 <h1>Containers</h1>
 
@@ -61,7 +58,7 @@ var obj = JSON.parse(data);
 <div id="redips-drag">
 	<ul class="bxslider">
  
- <script>
+<script>
 		var mytable;
 			for (var i = 0; i < //Object.keys(obj).length
 			3; i ++){	
@@ -75,6 +72,9 @@ var obj = JSON.parse(data);
 							mytable += '</tbody> </table></li>';
 }		
 document.write(mytable);
+
+var counter_of_master = 0 ;
+var new_html = '';
 </script>
 
 	 </ul>
@@ -85,7 +85,8 @@ document.write(mytable);
 					</colgroup>
 					<tbody>
 						<tr>
-							<td> <div id="b" class="redips-drag" >Master info</div>  </td>
+							
+							<td><div id="b" class="redips-drag" >Master info</div></td>
 						</tr>
 						<tr>
 							<td><div id="b" class="redips-drag" >Master info</div></td>
@@ -100,9 +101,14 @@ document.write(mytable);
 							<td><div id="e" class="redips-drag" >Master info</div></td>
 						</tr>
 						<tr>
-							<td> </td>
+							<td><script> counter_of_master++;'</script> </td>
 						</tr>
-						
+								<script>if (counter_of_master < counter_of_master+1){
+									new_html = "<tr><td> </td></tr>"
+									document.write(new_html);
+
+									
+								}; </script>
 					
 					
 					</tbody>
@@ -123,29 +129,19 @@ document.write(mytable);
   $(document).on('ready', function() {
 
 	
-	  
-	  
 	  $('.bxslider').bxSlider({
+		  slideWidth: 400,
 		  minSlides: 2,
-		  maxSlides: 3,
-		  slideWidth: 360,
-		  slideMargin: 20,
-		  infiniteLoop: false 
+		  maxSlides: 2,
+		  slideMargin: 10,
+		  infiniteLoop: false,
+		  hideControlOnEnd: true
 	  });
 
-	 
-	  
-	  
 	  
   });
 
 
-  </script>
-  
- 
-  
-  
-   
-
+</script>
 </body>
 </html>
