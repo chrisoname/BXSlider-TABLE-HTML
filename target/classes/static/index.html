@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Foundation</title>
+	  <meta charset="UTF-8">
+	  <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+      <link href="/css/jquery.bxslider.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/flickity.css" media="screen">
+      <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+
+
+
+	</head>
+<body onload="REDIPS.drag.init()">
+
+
+<p id="demo"></p>
+
+<script>
+
+var data =  ' [ { "destinationName": "Sizzler", "sourceId": "1", "fprId": "4951dac8-425b-4921-b437-b41fb1f42135", "govermentEndorsed": "yes", "sourceTimestamp": 1254, "destinationPrivacy": "yes", "destinationBusinessHours": "12pm", "latitude": -67.150497, "longitude": 18.169849, "mediaLinks": [ { "mediaType": "FB", "mediaURL": null } ], "themes": [ { "themeName": "Spa" } ], "thingsToDo": [ { "thingsToDo": "Military" } ], "facility": [], "amenities": [], "websites": [ { "website": "www.sizzler.com" } ], "emails": [ { "email": null, "emailPrivacy": "private" } ], "addresses": [ { "addressType": "POSTAL", "addressPrivacy": "POSTAL", "addressLine1": "Carr 2 Km 158.4 Bo Guanajibo", "addressLine2": "", "wardName": "wardname", "neighborhoodName": "abdyel", "cityIndex": "mayaguez", "zipCode": null } ], "categories": [ { "categoryName": "Gastronomy" } ], "attributes": [ { "attributeName": "Brazilian" } ] } ] ' ;
+
+var obj = JSON.parse(data);
+
+//obj[0].destinationName
+
+</script>
+
+<!-- ESTO NO SIRVE! Bootstrap Carousel -->
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  
+  
+  <div class="carousel-inner">
+   
+    <div class="active item"><img src="http://www.tutorialrepublic.com/examples/images/slide1.png"> </div>
+    <div class="item"><img src="http://www.tutorialrepublic.com/examples/images/slide2.png"> </div>
+    <div class="item"><img src="http://www.tutorialrepublic.com/examples/images/slide3.png"> </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
+
+
+
+
+<h1>Containers</h1>
+
+<!--  Drag-n-Drop using BXSlider, working with manyyyy bugs -->
+<div id="redips-drag">
+	<ul class="bxslider">
+ 
+ <script>
+		var mytable;
+			for (var i = 0; i < //Object.keys(obj).length
+			3; i ++){	
+							mytable += '<li><table><colgroup><col width="200"/></colgroup><tbody>';			
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].destinationName + 				'</div></td></tr>' ;
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].addresses[0].addressLine1 + 	'</div></td></tr>' ;
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].categories[0].categoryName + 	'</div></td></tr>' ;
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].websites[0].website + 			'</div></td></tr>' ;
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].latitude + 					'</div></td></tr>' ;
+							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].longitude + 					'</div></td></tr>' ;
+							mytable += '</tbody> </table></li>';
+}		
+document.write(mytable);
+</script>
+
+	 </ul>
+
+				<table>
+					<colgroup>
+						<col width="200"/>
+					</colgroup>
+					<tbody>
+						<tr>
+							<td> <div id="b" class="redips-drag" >Master info</div>  </td>
+						</tr>
+						<tr>
+							<td><div id="b" class="redips-drag" >Master info</div></td>
+						</tr>
+						<tr>
+							<td><div id="c" class="redips-drag" >Master info</div></td>
+						</tr>
+						<tr>
+							<td><div id="d" class="redips-drag" >Master info</div></td>
+						</tr>
+						<tr>
+							<td><div id="e" class="redips-drag" >Master info</div></td>
+						</tr>
+						<tr>
+							<td> </td>
+						</tr>
+						
+					
+					
+					</tbody>
+				</table>
+			</div>
+
+   <script type="text/javascript" src="../header.js"></script>
+   <script type="text/javascript" src="../redips-drag-min.js"></script>
+   <script type="text/javascript" src="../redips-drag-source.js"></script>
+   <script type="text/javascript" src="js/bootstrap.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="script.js"></script>
+   <script src="js/jquery.bxslider.min.js"></script>
+   
+   
+   
+   <script type="text/javascript">
+  $(document).on('ready', function() {
+
+	
+	  
+	  
+	  $('.bxslider').bxSlider({
+		  minSlides: 2,
+		  maxSlides: 3,
+		  slideWidth: 360,
+		  slideMargin: 20,
+		  infiniteLoop: false 
+	  });
+
+	 
+	  
+	  
+	  
+  });
+
+
+  </script>
+  
+ 
+  
+  
+   
+
+</body>
+</html>
