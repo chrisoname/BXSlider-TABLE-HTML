@@ -1,205 +1,197 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <title>Foundation</title>
-	  <meta charset="UTF-8">
-	  <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+   <head>
+      <title>Foundation</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
       <link href="/css/jquery.bxslider.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/flickity.css" media="screen">
       <link rel="stylesheet" href="css/bootstrap.css" media="screen">
       <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  
-
-
-
-	</head>
-<body>
-
-
-<p id="demo"></p>
-
-<script>
-
-var data =  ' [ { "destinationName": "Sizzler", "sourceId": "1", "fprId": "4951dac8-425b-4921-b437-b41fb1f42135", "govermentEndorsed": "yes", "sourceTimestamp": 1254, "destinationPrivacy": "yes", "destinationBusinessHours": "12pm", "latitude": -67.150497, "longitude": 18.169849, "mediaLinks": [ { "mediaType": "FB", "mediaURL": null } ], "themes": [ { "themeName": "Spa" } ], "thingsToDo": [ { "thingsToDo": "Military" } ], "facility": [], "amenities": [], "websites": [ { "website": "www.sizzler.com" } ], "emails": [ { "email": null, "emailPrivacy": "private" } ], "addresses": [ { "addressType": "POSTAL", "addressPrivacy": "POSTAL", "addressLine1": "Carr 2 Km 158.4 Bo Guanajibo", "addressLine2": "", "wardName": "wardname", "neighborhoodName": "abdyel", "cityIndex": "mayaguez", "zipCode": null } ], "categories": [ { "categoryName": "Gastronomy" } ], "attributes": [ { "attributeName": "Brazilian" } ] } ] ' ;
-
-var obj = JSON.parse(data);
-
-//obj[0].destinationName
-
-</script>
-
-
-
-<!-- CONTAINER 2 SIN EL SCRIPT DE JAVASCRIPT -->
-
-
-
-<!--  Drag-n-Drop using BXSlider, working with manyyyy bugs -->
-<div class="head-area"> 
-<div class="header">
-<div id = "containers">
-<ul class="bxslider">
- 
-<script>
-		var mytable;
-			for (var i = 0; i < //Object.keys(obj).length
-			5; i ++){	
-							
-							mytable += '<div id ="table-scroll" class="linked"><li><table><colgroup><col width="200"/></colgroup><tbody>';		
-							mytable += '<caption> Source Name(TripAdvisor, etc) </caption>'; // obj[0].sourceName ... cuando exista!!
-							mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox"> '+ obj[0].destinationName + 				'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox"> '+ obj[0].addresses[0].addressLine1 + 	'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox"> '+ obj[0].categories[0].categoryName + 	'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox"> '+ obj[0].websites[0].website + 			'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox"> '+ obj[0].latitude + 					    '</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox"> '+ obj[0].longitude + 					'</td></tr>' ;
-							mytable += '</tbody></table></li></div>';
-}		
-document.write(mytable);
-
-
-</script>
-</ul>
-</div>
-</div>
-
-
-	<div align="center">
-
-		<div class="navigation">
-			<div id = "master">					
-					<div id ="table-scroll2" class="linked"><table>
-
-						
-					</table></div>					
-			</div>
-		</div>	
-	</div>
-</div>
-
-
-
-  	<div align="center">
-  
-
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Property To Master Controller</button>
-</div>
-  <div id="id01" class="modal">
-    
-    <form class="modal-content animate" action="#">
-    
-      <div class="container">
-        <label><b>Property Name</b></label>
-        <input type="text" placeholder="Ex. Category Name" name="property_name" >
-
-        <label><b>New Property for the Master Controller</b></label>
-        <input type="text" placeholder="Ex. Gastronomy" name="property_value" >
-          
-        <button type="button" onclick="myFunction(property_name, property_value)">Submit</button>
-        
+   </head>
+   <body>
+      <script>
+         var data =  ' [ { "destinationName": "Sizzler", "sourceId": "1", "fprId": "4951dac8-425b-4921-b437-b41fb1f42135", "govermentEndorsed": "yes", "sourceTimestamp": 1254, "destinationPrivacy": "yes", "destinationBusinessHours": "12pm", "latitude": -67.150497, "longitude": 18.169849, "mediaLinks": [ { "mediaType": "FB", "mediaURL": null } ], "themes": [ { "themeName": "Spa" } ], "thingsToDo": [ { "thingsToDo": "Military" } ], "facility": [], "amenities": [], "websites": [ { "website": "www.sizzler.com" } ], "emails": [ { "email": null, "emailPrivacy": "private" } ], "addresses": [ { "addressType": "POSTAL", "addressPrivacy": "POSTAL", "addressLine1": "Carr 2 Km 158.4 Bo Guanajibo", "addressLine2": "", "wardName": "wardname", "neighborhoodName": "abdyel", "cityIndex": "mayaguez", "zipCode": null } ], "categories": [ { "categoryName": "Gastronomy" } ], "attributes": [ { "attributeName": "Brazilian" } ] } ] ' ;
+         
+         var obj = JSON.parse(data);
+         
+         //obj[0].destinationName
+         
+      </script>
+      <!-- CONTAINER 2 SIN EL SCRIPT DE JAVASCRIPT -->
+      <!--  Drag-n-Drop using BXSlider, working with manyyyy bugs -->
+      <div class="head-area">
+         <div class="header">
+            <div id = "containers">
+               <ul class="bxslider">
+                  <script>
+                     var mytable;
+                     
+                     for (var i = 0; i < //Object.keys(obj).length
+                     					5; i ++){	
+                     			
+                     			mytable += '<div id ="table-scroll" class="linked"><li><table class="table"><colgroup><col width="200"/></colgroup><tbody>';		
+                     			mytable += '<caption> Source Name(TripAdvisor, etc) </caption>'; // obj[0].sourceName ... cuando exista!!
+                     			mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox" class="destination" > '+ obj[0].destinationName + 				'</td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox" class="address" > '+ obj[0].addresses[0].addressLine1 + 	'</td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox" class="category"  > '+ obj[0].categories[0].categoryName + 	'</td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox" class="website"  > '+ obj[0].websites[0].website + 			'</td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox" class="latitude"  > '+ obj[0].latitude + 					    '</td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox" class="longitude"  > '+ obj[0].longitude + 					'</td></tr>' ;
+                     			mytable += '</tbody></table></li></div>';
+                     }		
+                     document.write(mytable);
+                     
+                     
+                  </script>
+               </ul>
+            </div>
+         </div>
+         <div align="center">
+            <div class="navigation">
+               <div id = "master">
+                  <div id ="table-scroll2" class="linked">
+                     <table class="table">
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-	<div align="center">
-      		<div class="container">
-       			 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-     		</div>
-    </div>
+      <div align="center">
+         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Property To Master Controller</button>
+      </div>
+      <div id="id01" class="modal">
+         
+         
+         
+         <form class="modal-content animate" action="#">
+            <div class="container">
+               
+               <div class="form-group">
+  				<label for="sel1">Property name:</label>
+  				<select class="form-control" id="sel1" name="property_name" >
+  					  <option>destination</option>
+    				  <option>2</option>
+   					  <option>3</option>
+    				  <option>4</option>
+  				</select>
+				</div>
+               
+               <label><b>Property Name</b></label>               
+             <!--    <input type="text" placeholder="Ex. Category Name" name="property_name" > -->
+               
+               <label><b>New Property for the Master Controller</b></label>
+               <input type="text" placeholder="Ex. Gastronomy" name="property_value" >
+               <button type="button" onclick="myFunction(property_name, property_value)"  >Submit</button>
+            </div>
+            <div align="center">
+               <div class="container">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+               </div>
+            </div>
+         </form>
+      </div>
       
-    </form>
-  </div>
-  
 
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script type="text/javascript" src="../header.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!--    <script type="text/javascript" src="script.js"></script> -->
+      <script src="js/jquery.bxslider.min.js"></script>
+      <script type="text/javascript">
+         //Get the modal
+           var modal = document.getElementById('id01');
+         
+           // When the user clicks anywhere outside of the modal, close it
+           window.onclick = function(event) {
+               if (event.target == modal) {
+                   modal.style.display = "none";
+               }
+           }
+         // BXslider and Slicks onReady
+           
+           $(document).on('ready', function() {
+         
+         	  $('.your-class').slick({
+         		    infinite: false
+         		  
+         	  });
+         	  $('.bxslider').bxSlider({
+         		  slideWidth: 500,
+         		  minSlides: 3,
+         		  maxSlides: 2,
+         		  slideMargin: 10,
+         		  infiniteLoop: false,
+         		  hideControlOnEnd: true
+         	  });
+         
+         	 
+           });
+           var i = 0 ;
+         
+           function myFunction(string1, string2) {
+         	
+         		$('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
+         	        i++;
+         	       	
+         	     document.getElementById('id01').style.display='none';
+           		 
+                 $("#containers input." + string1['value']).attr('disabled', true);
 
-   <script type="text/javascript" src="slick/slick.min.js"></script>
-   <script type="text/javascript" src="../header.js"></script>
-   <script type="text/javascript" src="../redips-drag-min.js"></script>
-   <script type="text/javascript" src="../redips-drag-source.js"></script>
-   <script type="text/javascript" src="js/bootstrap.js"></script>
-   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="script.js"></script>
-   <script src="js/jquery.bxslider.min.js"></script>
+         	};
+         	 
+         	$(function(){
+         
+         	    $('.linked').scroll(function(){
+         	        $('.linked').scrollTop($(this).scrollTop());    
+         	    })
+         
+         	});
+           
+           
+           
+           $(document).on('click',function(){
+            $("#master input:checkbox").click(function(){
+            	
+            	  var index = $(this).closest("tr").attr("data-index"); 
+         	      var findRow = $("#master tr[data-index='" + index + "']");
+         	      findRow.remove();
+         		  var findClass = $(this).closest("input").attr("class");
+         	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");
+         	      findRowOfContainer.remove();
+                  $("input." + findClass).attr('disabled', false);
+                  $("input." + findClass).attr('checked', false);
+         	      
+         	  });
+         	});
+           
+           $(function(){
+           $("#containers input:checkbox").click(function(){
+             if ($(this).is(":checked"))
+             {
+               $(this).closest("tr").clone().appendTo("#master table");
+               var index = $(this).closest("tr").attr("data-index"); 
+               var findRow = $("#master tr[data-index='" + index + "']");
+      	       var findClass = $(this).closest("input").attr("class");
 
-   
-   
-  <script type="text/javascript">
+               $("#containers input." + findClass).attr('disabled', true);
 
-  
-//Get the modal
-  var modal = document.getElementById('id01');
+               
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-// BXslider and Slicks onReady
-  
-  $(document).on('ready', function() {
-
-	  $('.your-class').slick({
-		    infinite: false
-		  
-	  });
-	  $('.bxslider').bxSlider({
-		  slideWidth: 500,
-		  minSlides: 3,
-		  maxSlides: 2,
-		  slideMargin: 10,
-		  infiniteLoop: false,
-		  hideControlOnEnd: true
-	  });
-
-	 
-  });
-  var i = 0 ;
-
-  function myFunction(string1, string2) {
-	
-		$('<tr data-index="'+ i +'new"><td><input type="checkbox" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
-	        i++;
-	        document.getElementById('id01').style.display='none';
-	};
-  
-	$(function(){
-
-	    $('.linked').scroll(function(){
-	        $('.linked').scrollTop($(this).scrollTop());    
-	    })
-
-	});
-  
-  
-  
-  $(document).on('click',function(){
-   $("#master input:checkbox").click(function(){
-		  var index = $(this).closest("tr").attr("data-index"); 
-	      var findRow = $("#master tr[data-index='" + index + "']");
-	      findRow.remove();
-
-	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");
-	      findRowOfContainer.remove();
-	      
-	      
-	  });
-	});
-  
-  $(function(){
-  $("#containers input:checkbox").click(function(){
-    if ($(this).is(":checked"))
-    {
-      $(this).closest("tr").clone().appendTo("#master table");
-    }
-    else
-    {
-      var index = $(this).closest("tr").attr("data-index"); 
-      var findRow = $("#master tr[data-index='" + index + "']");
-      findRow.remove();
-    }
-  });
-});
-
-</script>
-</body>
+             }
+             else
+             {
+               var index = $(this).closest("tr").attr("data-index"); 
+               var findRow = $("#master tr[data-index='" + index + "']");
+               findRow.remove();
+             }
+           });
+         });
+         
+      </script>
+   </body>
 </html>
