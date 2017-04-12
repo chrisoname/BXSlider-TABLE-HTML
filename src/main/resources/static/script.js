@@ -20,9 +20,9 @@ redipsInit = function () {
 
 	rd.dropMode = 'single';
 	rd.mark.action = 'deny';
-	rd.init('redips-drag'); 
-	
-	
+	//rd.init('redips-drag'); 
+
+
 	
 	// this function (event handler) is called after element is dropped
 	rd.event.dropped = function () {
@@ -65,13 +65,3 @@ redipsInit = function () {
 	else if (window.attachEvent) {
 	window.attachEvent('onload', redipsInit);
 	}
-
-
-
-
-
-		
-		
-		
-		
-

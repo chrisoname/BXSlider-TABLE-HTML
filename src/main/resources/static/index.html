@@ -7,14 +7,15 @@
       <link href="/css/jquery.bxslider.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/flickity.css" media="screen">
       <link rel="stylesheet" href="css/bootstrap.css" media="screen">
-      
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   
 
 
 
 	</head>
-<body onload="REDIPS.drag.init()">
+<body>
 
 
 <p id="demo"></p>
@@ -29,92 +30,88 @@ var obj = JSON.parse(data);
 
 </script>
 
-<!-- ESTO NO SIRVE! Bootstrap Carousel -->
-<div id="myCarousel" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <!-- Carousel items -->
-  
-  
-  <div class="carousel-inner">
-   
-    <div class="active item"><img src="http://www.tutorialrepublic.com/examples/images/slide1.png"> </div>
-    <div class="item"><img src="http://www.tutorialrepublic.com/examples/images/slide2.png"> </div>
-    <div class="item"><img src="http://www.tutorialrepublic.com/examples/images/slide3.png"> </div>
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
+
 
 <!-- CONTAINER 2 SIN EL SCRIPT DE JAVASCRIPT -->
 
-<h1>Containers</h1>
+
 
 <!--  Drag-n-Drop using BXSlider, working with manyyyy bugs -->
-<div id="redips-drag">
-	<ul class="bxslider">
+<div class="head-area"> 
+<div class="header">
+<div id = "containers">
+<ul class="bxslider">
  
 <script>
 		var mytable;
 			for (var i = 0; i < //Object.keys(obj).length
-			3; i ++){	
-							mytable += '<li><table><colgroup><col width="200"/></colgroup><tbody>';			
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].destinationName + 				'</div></td></tr>' ;
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].addresses[0].addressLine1 + 	'</div></td></tr>' ;
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].categories[0].categoryName + 	'</div></td></tr>' ;
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].websites[0].website + 			'</div></td></tr>' ;
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].latitude + 					'</div></td></tr>' ;
-							mytable += '<tr><td><div class="redips-drag redips-clone"> '+ obj[0].longitude + 					'</div></td></tr>' ;
-							mytable += '</tbody> </table></li>';
+			5; i ++){	
+							
+							mytable += '<div id ="table-scroll" class="linked"><li><table><colgroup><col width="200"/></colgroup><tbody>';		
+							mytable += '<caption> Source Name(TripAdvisor, etc) </caption>'; // obj[0].sourceName ... cuando exista!!
+							mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox"> '+ obj[0].destinationName + 				'</td></tr>' ;
+							mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox"> '+ obj[0].addresses[0].addressLine1 + 	'</td></tr>' ;
+							mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox"> '+ obj[0].categories[0].categoryName + 	'</td></tr>' ;
+							mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox"> '+ obj[0].websites[0].website + 			'</td></tr>' ;
+							mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox"> '+ obj[0].latitude + 					    '</td></tr>' ;
+							mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox"> '+ obj[0].longitude + 					'</td></tr>' ;
+							mytable += '</tbody></table></li></div>';
 }		
 document.write(mytable);
 
-var counter_of_master = 0 ;
-var new_html = '';
+
 </script>
+</ul>
+</div>
+</div>
 
-	 </ul>
 
-				<table>
-					<colgroup>
-						<col width="200"/>
-					</colgroup>
-					<tbody>
-						<tr>
-							
-							<td><div id="b" class="redips-drag" >Master info</div></td>
-						</tr>
-						<tr>
-							<td><div id="b" class="redips-drag" >Master info</div></td>
-						</tr>
-						<tr>
-							<td><div id="c" class="redips-drag" >Master info</div></td>
-						</tr>
-						<tr>
-							<td><div id="d" class="redips-drag" >Master info</div></td>
-						</tr>
-						<tr>
-							<td><div id="e" class="redips-drag" >Master info</div></td>
-						</tr>
-						<tr>
-							<td><script> counter_of_master++;'</script> </td>
-						</tr>
-								<script>if (counter_of_master < counter_of_master+1){
-									new_html = "<tr><td> </td></tr>"
-									document.write(new_html);
+	<div align="center">
 
-									
-								}; </script>
-					
-					
-					</tbody>
-				</table>
+		<div class="navigation">
+			<div id = "master">					
+					<div id ="table-scroll2" class="linked"><table>
+
+						
+					</table></div>					
 			</div>
+		</div>	
+	</div>
+</div>
 
+
+
+  	<div align="center">
+  
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Property To Master Controller</button>
+</div>
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="#">
+    
+      <div class="container">
+        <label><b>Property Name</b></label>
+        <input type="text" placeholder="Ex. Category Name" name="property_name" >
+
+        <label><b>New Property for the Master Controller</b></label>
+        <input type="text" placeholder="Ex. Gastronomy" name="property_value" >
+          
+        <button type="button" onclick="myFunction(property_name, property_value)">Submit</button>
+        
+      </div>
+	<div align="center">
+      		<div class="container">
+       			 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+     		</div>
+    </div>
+      
+    </form>
+  </div>
+  
+
+
+   <script type="text/javascript" src="slick/slick.min.js"></script>
    <script type="text/javascript" src="../header.js"></script>
    <script type="text/javascript" src="../redips-drag-min.js"></script>
    <script type="text/javascript" src="../redips-drag-source.js"></script>
@@ -122,25 +119,86 @@ var new_html = '';
    <script type="text/javascript" src="js/bootstrap.min.js"></script>
    <script type="text/javascript" src="script.js"></script>
    <script src="js/jquery.bxslider.min.js"></script>
+
    
    
-   
-   <script type="text/javascript">
+  <script type="text/javascript">
+
+  
+//Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+// BXslider and Slicks onReady
+  
   $(document).on('ready', function() {
 
-	
+	  $('.your-class').slick({
+		    infinite: false
+		  
+	  });
 	  $('.bxslider').bxSlider({
-		  slideWidth: 400,
-		  minSlides: 2,
+		  slideWidth: 500,
+		  minSlides: 3,
 		  maxSlides: 2,
 		  slideMargin: 10,
 		  infiniteLoop: false,
 		  hideControlOnEnd: true
 	  });
 
-	  
+	 
   });
+  var i = 0 ;
 
+  function myFunction(string1, string2) {
+	
+		$('<tr data-index="'+ i +'new"><td><input type="checkbox" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
+	        i++;
+	        document.getElementById('id01').style.display='none';
+	};
+  
+	$(function(){
+
+	    $('.linked').scroll(function(){
+	        $('.linked').scrollTop($(this).scrollTop());    
+	    })
+
+	});
+  
+  
+  
+  $(document).on('click',function(){
+   $("#master input:checkbox").click(function(){
+		  var index = $(this).closest("tr").attr("data-index"); 
+	      var findRow = $("#master tr[data-index='" + index + "']");
+	      findRow.remove();
+
+	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");
+	      findRowOfContainer.remove();
+	      
+	      
+	  });
+	});
+  
+  $(function(){
+  $("#containers input:checkbox").click(function(){
+    if ($(this).is(":checked"))
+    {
+      $(this).closest("tr").clone().appendTo("#master table");
+    }
+    else
+    {
+      var index = $(this).closest("tr").attr("data-index"); 
+      var findRow = $("#master tr[data-index='" + index + "']");
+      findRow.remove();
+    }
+  });
+});
 
 </script>
 </body>
