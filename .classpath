@@ -27,5 +27,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/FFPRDataHub"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FPRDataLoader"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MSSQLService"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
