@@ -74,9 +74,11 @@
   				<label for="sel1">Property name:</label>
   				<select class="form-control" id="sel1" name="property_name" >
   					  <option>destination</option>
-    				  <option>2</option>
-   					  <option>3</option>
-    				  <option>4</option>
+    				  <option>address</option>
+   					  <option>category</option>
+    				  <option>website</option>
+    				  <option>latitude</option>
+    				  <option>longitude</option>
   				</select>
 				</div>
                
@@ -84,7 +86,7 @@
              <!--    <input type="text" placeholder="Ex. Category Name" name="property_name" > -->
                
                <label><b>New Property for the Master Controller</b></label>
-               <input type="text" placeholder="Ex. Gastronomy" name="property_value" >
+               <input type="text"  name="property_value" required>
                <button type="button" onclick="myFunction(property_name, property_value)"  >Submit</button>
             </div>
             <div align="center">
@@ -133,17 +135,33 @@
            });
            var i = 0 ;
          
-           function myFunction(string1, string2) {
-         	
-         		$('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
-         	        i++;
-         	       	
-         	     document.getElementById('id01').style.display='none';
-           		 
-                 $("#containers input." + string1['value']).attr('disabled', true);
-
+           function myFunction(string1, string2) {   
+        	   
+        	   if(add_to_list(string1) == -1){
+   				alert("It already exists. Remove first the property for overwrite.") ;
+   			   	return 0;
+        	   }
+        	   if (string2['value']){
+        		   
+        		   
+        		  		 $('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
+         	      		  i++;
+         	   	 		  document.getElementById('id01').style.display='none';
+                		  $("#containers input." + string1['value']).attr('disabled', true);
+        	 
+        	   }
+        	   else{        		   
+        		  
+        		   
+        		   alert("Please enter a property name.");
+        		   remove_from_list(string1['value']);
+        		   
+        	   }
          	};
-         	 
+         	
+    
+         	
+         	
          	$(function(){
          
          	    $('.linked').scroll(function(){
@@ -152,8 +170,48 @@
          
          	});
            
-           
-           
+
+         	
+         	var lista_de_propiedades = [];
+
+
+         	
+         	
+         	
+         	
+         	function add_to_list(string1){
+         			
+         			if( lista_de_propiedades.includes( string1['value']) == true ){
+         				return -1;
+         				}
+         			else{
+         				lista_de_propiedades.push( string1['value'] );
+         				//alert(lista_de_propiedades);
+         			}
+         	};
+         	
+         	function remove_from_list(string1){
+             	
+             	lista_de_propiedades.pop(string1);
+ 				//alert(lista_de_propiedades);
+
+         	};
+ 
+         	
+        	function add_to_list_containers(string1){
+     			
+     				if( lista_de_propiedades.includes( string1) == true ){
+     					return -1;
+     					}
+     				else{
+     					lista_de_propiedades.push( string1 );
+     					//alert(lista_de_propiedades);
+     				}
+     			};
+     	
+         	
+         	
+         	
            $(document).on('click',function(){
             $("#master input:checkbox").click(function(){
             	
@@ -163,11 +221,13 @@
          		  var findClass = $(this).closest("input").attr("class");
          	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");
          	      findRowOfContainer.remove();
+            		//alert(findClass);
+         	      lista_de_propiedades.pop(findClass);
                   $("input." + findClass).attr('disabled', false);
                   $("input." + findClass).attr('checked', false);
-         	      
+         	     // alert(lista_de_propiedades);
          	  });
-         	});
+         	});                    
            
            $(function(){
            $("#containers input:checkbox").click(function(){
@@ -177,13 +237,10 @@
                var index = $(this).closest("tr").attr("data-index"); 
                var findRow = $("#master tr[data-index='" + index + "']");
       	       var findClass = $(this).closest("input").attr("class");
-
                $("#containers input." + findClass).attr('disabled', true);
-
-               
-
+               add_to_list_containers(findClass);
              }
-             else
+             else //este else no se esta haciendo porque los campos del checkbox son disabled. sigue ahi porsiacaso.
              {
                var index = $(this).closest("tr").attr("data-index"); 
                var findRow = $("#master tr[data-index='" + index + "']");
