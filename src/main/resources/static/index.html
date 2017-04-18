@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+   
+   
    <head>
       <title>Foundation</title>
       <meta charset="UTF-8">
@@ -59,16 +61,16 @@
                      
                      for (var i = 0; i < //Object.keys(obj).length
                      					5; i ++){	
-                     			
-                     			mytable += '<div id ="table-scroll" class="linked"><li><table class="table"><colgroup><col width="200"/></colgroup><tbody>';		
-                     			mytable += '<caption> Source Name(TripAdvisor, etc) </caption>'; // obj[0].sourceName ... cuando exista!!
-                     			mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox" class="destination" > '+ obj[0].destinationName + 				'</td></tr>' ;
-                     			mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox" class="address" > '+ obj[0].addresses[0].addressLine1 + 		'</td></tr>' ;
-                     			mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox" class="category"  > '+ obj[0].categories[0].categoryName + 	'</td></tr>' ;
-                     			mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox" class="website"  > '+ obj[0].websites[0].website + 			'</td></tr>' ;
-                     			mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox" class="latitude"  > '+ obj[0].latitude + 					    '</td></tr>' ;
-                     			mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox" class="longitude"  > '+ obj[0].longitude + 					'</td></tr>' ;
-                     			mytable += '</tbody></table></li></div>';
+                    	 
+                     			mytable += '<div id ="table-scroll" class="linked"><li><table class="table"><colgroup><col width="100"/></colgroup><tbody>';		
+                     			mytable += '<caption> Source Name(TripAdvisor, etc) </caption> '; // obj[0].sourceName ... cuando exista!!
+                     			mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox" class="destination" > '+ obj[0].destinationName + 				'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox" class="address" > '+ obj[0].addresses[0].addressLine1 + 		'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox" class="category"  > '+ obj[0].categories[0].categoryName + 	'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox" class="website"  > '+ obj[0].websites[0].website + 			'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox" class="latitude"  > '+ obj[0].latitude + 					    '  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox" class="longitude"  > '+ obj[0].longitude + 					'  </td></tr>' ;
+                     			mytable += ' </tbody></table> </li></div>';
                      }		
                      document.write(mytable);
                      
@@ -88,24 +90,20 @@
          
      <!--  Master Starts Here, it is empty. It will be filled by the containers "checkbox" -->
          
-         <div align="center">
+
             <div class="navigation">
                <div id = "master">
-                  <div id ="table-scroll2" class="linked">
-                     <table class="table">
+                  <div id ="table-scroll" class="linked">
+                     <table class="table"> <caption> Master Controller </caption> 
                      </table>
                   </div>
                </div>
-            </div>
-         </div>
+            </div>     
       </div>
      
      <!-- Master Controller ENDS HERE! -->
      
-     
-     
-     
-     
+
      
      
      
@@ -159,7 +157,6 @@
       
       
       
-      
       <script type="text/javascript" src="js/bootstrap.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script src="js/jquery.bxslider.min.js"></script>
@@ -184,7 +181,7 @@
            $(document).on('ready', function() {
                	 
          	  $('.bxslider').bxSlider({
-         		  slideWidth: 500,
+         		  slideWidth: 400,
          		  minSlides: 3,
          		  maxSlides: 2,
          		  slideMargin: 10,
@@ -209,7 +206,9 @@
          	   
          	   
          	  		 $('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
-         	      		  i++;
+         	  	//	 $('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master_properties table");
+	  
+         	  		 i++;
          	   	 		  document.getElementById('id01').style.display='none';
                 		  $("#containers input." + string1['value']).attr('disabled', true); //it disables the same property in the containers that it is adding to the master.
                                                                                              //Ex. If "address" is added to the master, it disables every address on the containers

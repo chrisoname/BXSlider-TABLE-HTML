@@ -6,6 +6,8 @@ body {
 .head-area{width:100%; overflow:hidden;}
 .header{float:left;}
 .navigation{overflow:hidden; }
+.navigation2{overflow:hidden; }
+
 .head-area{clear:both;}
 /* make drag container visible */
 
@@ -98,7 +100,7 @@ span.psw {
     font-size: 35px;
     font-weight: bold;
 }
-#table-scroll, #table-scroll2 {
+#table-scroll, #table-scroll2, #table-scroll3 {
   height:150px;
   overflow:auto;  
   margin-top:20px;
