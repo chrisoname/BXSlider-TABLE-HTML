@@ -90,17 +90,17 @@
          
      <!--  Master Starts Here, it is empty. It will be filled by the containers "checkbox" -->
          
-
+ 
             <div class="navigation">
                <div id = "master">
                   <div id ="table-scroll" class="linked">
-                     <table class="table"> <caption> Master Controller </caption> 
+                    <table class="table">  <caption>  Master Controller </caption>
                      </table>
-                  </div>
+                 
                </div>
             </div>     
       </div>
-     
+      </div>
      <!-- Master Controller ENDS HERE! -->
      
 
@@ -110,7 +110,7 @@
      <!-- Button to Add New Property to the master controller -->
      
       <div align="center">
-         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Property To Master Controller</button>
+         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-plus"></span> Add New Property To Master Controller</button>
       </div>
       
     <!-- Button to Add New Property ENDS HERE. It redirects to the MODAL -->  
@@ -137,7 +137,7 @@
                   </select>
                </div>
                <label><b>New Property for the Master Controller</b></label>
-               <input type="text"  name="property_value" required>
+               <input type="text"  name="property_value" required maxlength="140">
                <div align="center">
                   <button type="button" onclick="modal_validator(property_name, property_value)"  >Submit</button>
                </div>
@@ -162,7 +162,26 @@
       <script src="js/jquery.bxslider.min.js"></script>
       <script type="text/javascript">
        
-      
+      $("input[maxlength]").each(function() {
+    	    var $this = $(this);
+    	    var maxLength = parseInt($this.attr('maxlength'));
+    	    $this.attr('maxlength', null);
+    	    
+    	    var el = $("<span class=\"character-count\">" + maxLength + "</span>");
+    	    el.insertAfter($this);
+    	    
+    	    $this.bind('keyup', function() {
+    	        var cc = $this.val().length;
+    	        
+    	        el.text(maxLength - cc);
+    	        
+    	        if(maxLength < cc) {
+    	            el.css('color', 'red');
+    	        } else {
+    	            el.css('color', null);
+    	        }
+    	    });
+    	});
       
       //Get the modal
            var modal = document.getElementById('id01');
