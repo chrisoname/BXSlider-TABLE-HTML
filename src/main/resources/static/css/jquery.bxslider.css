@@ -48,7 +48,6 @@ ul.bxslider {
   box-shadow: 0 0 0px #ccc;
   border: 5px solid #fff;
   background: #fff;
-  border-style: dashed;
 }
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
@@ -116,10 +115,14 @@ ul.bxslider {
 .bx-wrapper .bx-next {
   right: 10px;
   background: url('images/controls.png') no-repeat -43px -32px;
+ 
+  
 }
 .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {
   background-position: -43px 0;
+
+  
 }
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
@@ -129,7 +132,7 @@ ul.bxslider {
   width: 32px;
   height: 32px;
   text-indent: -9999px;
-  z-index: 9999;
+  z-index: 100;
 }
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;

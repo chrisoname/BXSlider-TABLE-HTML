@@ -1,205 +1,334 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <title>Foundation</title>
-	  <meta charset="UTF-8">
-	  <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+   
+   
+   <head>
+      <title>Foundation</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
       <link href="/css/jquery.bxslider.css" rel="stylesheet" />
-      <link rel="stylesheet" href="css/flickity.css" media="screen">
       <link rel="stylesheet" href="css/bootstrap.css" media="screen">
-      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   </head>
   
-
-
-
-	</head>
-<body>
-
-
-<p id="demo"></p>
-
-<script>
-
-var data =  ' [ { "destinationName": "Sizzler", "sourceId": "1", "fprId": "4951dac8-425b-4921-b437-b41fb1f42135", "govermentEndorsed": "yes", "sourceTimestamp": 1254, "destinationPrivacy": "yes", "destinationBusinessHours": "12pm", "latitude": -67.150497, "longitude": 18.169849, "mediaLinks": [ { "mediaType": "FB", "mediaURL": null } ], "themes": [ { "themeName": "Spa" } ], "thingsToDo": [ { "thingsToDo": "Military" } ], "facility": [], "amenities": [], "websites": [ { "website": "www.sizzler.com" } ], "emails": [ { "email": null, "emailPrivacy": "private" } ], "addresses": [ { "addressType": "POSTAL", "addressPrivacy": "POSTAL", "addressLine1": "Carr 2 Km 158.4 Bo Guanajibo", "addressLine2": "", "wardName": "wardname", "neighborhoodName": "abdyel", "cityIndex": "mayaguez", "zipCode": null } ], "categories": [ { "categoryName": "Gastronomy" } ], "attributes": [ { "attributeName": "Brazilian" } ] } ] ' ;
-
-var obj = JSON.parse(data);
-
-//obj[0].destinationName
-
-</script>
-
-
-
-<!-- CONTAINER 2 SIN EL SCRIPT DE JAVASCRIPT -->
-
-
-
-<!--  Drag-n-Drop using BXSlider, working with manyyyy bugs -->
-<div class="head-area"> 
-<div class="header">
-<div id = "containers">
-<ul class="bxslider">
- 
-<script>
-		var mytable;
-			for (var i = 0; i < //Object.keys(obj).length
-			5; i ++){	
-							
-							mytable += '<div id ="table-scroll" class="linked"><li><table><colgroup><col width="200"/></colgroup><tbody>';		
-							mytable += '<caption> Source Name(TripAdvisor, etc) </caption>'; // obj[0].sourceName ... cuando exista!!
-							mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox"> '+ obj[0].destinationName + 				'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox"> '+ obj[0].addresses[0].addressLine1 + 	'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox"> '+ obj[0].categories[0].categoryName + 	'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox"> '+ obj[0].websites[0].website + 			'</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox"> '+ obj[0].latitude + 					    '</td></tr>' ;
-							mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox"> '+ obj[0].longitude + 					'</td></tr>' ;
-							mytable += '</tbody></table></li></div>';
-}		
-document.write(mytable);
-
-
-</script>
-</ul>
-</div>
-</div>
-
-
-	<div align="center">
-
-		<div class="navigation">
-			<div id = "master">					
-					<div id ="table-scroll2" class="linked"><table>
-
-						
-					</table></div>					
-			</div>
-		</div>	
-	</div>
-</div>
-
-
-
-  	<div align="center">
   
+  
+  
+  
+   <body>
 
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Property To Master Controller</button>
-</div>
-  <div id="id01" class="modal">
-    
-    <form class="modal-content animate" action="#">
+     <!--  PARSER.. It will need fix when getting REAL DATA -->
+     
+      <script>
+         
+         var data =  ' [ { "destinationName": "Sizzler", "sourceId": "1", "fprId": "4951dac8-425b-4921-b437-b41fb1f42135", "govermentEndorsed": "yes", "sourceTimestamp": 1254, "destinationPrivacy": "yes", "destinationBusinessHours": "12pm", "latitude": -67.150497, "longitude": 18.169849, "mediaLinks": [ { "mediaType": "FB", "mediaURL": null } ], "themes": [ { "themeName": "Spa" } ], "thingsToDo": [ { "thingsToDo": "Military" } ], "facility": [], "amenities": [], "websites": [ { "website": "www.sizzler.com" } ], "emails": [ { "email": null, "emailPrivacy": "private" } ], "addresses": [ { "addressType": "POSTAL", "addressPrivacy": "POSTAL", "addressLine1": "Carr 2 Km 158.4 Bo Guanajibo", "addressLine2": "", "wardName": "wardname", "neighborhoodName": "abdyel", "cityIndex": "mayaguez", "zipCode": null } ], "categories": [ { "categoryName": "Gastronomy" } ], "attributes": [ { "attributeName": "Brazilian" } ] } ] ' ;         
+         var obj = JSON.parse(data);           
+         //obj[0].destinationName         
+      
+      </script>
+     
+     <!-- Parser ends here -->
+
+
+
+
+
+
+     
+     <!-- Jumbotron TITLE -->
     
       <div class="container">
-        <label><b>Property Name</b></label>
-        <input type="text" placeholder="Ex. Category Name" name="property_name" >
-
-        <label><b>New Property for the Master Controller</b></label>
-        <input type="text" placeholder="Ex. Gastronomy" name="property_value" >
-          
-        <button type="button" onclick="myFunction(property_name, property_value)">Submit</button>
-        
+         <div class="jumbotron">
+            <h1>Foundation Curator</h1>
+            <p>A manual filter.</p>
+         </div>
       </div>
-	<div align="center">
-      		<div class="container">
-       			 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-     		</div>
-    </div>
+     
+     <!-- Jumbotron Title ENDS HERE! -->
+     
+     
+     
+     
+     
+     <!-- CONTAINERS from which you select to check for the Master!! -->
       
-    </form>
-  </div>
-  
+      <div class="head-area">
+         <div class="header">
+            <div id = "containers">
+               <ul class="bxslider">
+                  <script>
+                     var mytable;
+                     
+                     for (var i = 0; i < //Object.keys(obj).length
+                     					5; i ++){	
+                    	 
+                     			mytable += '<div id ="table-scroll" class="linked"><li><table class="table"><colgroup><col width="100"/></colgroup><tbody>';		
+                     			mytable += '<caption> Source Name(TripAdvisor, etc) </caption> '; // obj[0].sourceName ... cuando exista!!
+                     			mytable += '<tr data-index="'+ i +'a"><td><input type="checkbox" class="destination" > '+ obj[0].destinationName + 				'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'b"><td><input type="checkbox" class="address" > '+ obj[0].addresses[0].addressLine1 + 		'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'c"><td><input type="checkbox" class="category"  > '+ obj[0].categories[0].categoryName + 	'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'d"><td><input type="checkbox" class="website"  > '+ obj[0].websites[0].website + 			'  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'e"><td><input type="checkbox" class="latitude"  > '+ obj[0].latitude + 					    '  </td></tr>' ;
+                     			mytable += '<tr data-index="'+ i +'f"><td><input type="checkbox" class="longitude"  > '+ obj[0].longitude + 					'  </td></tr>' ;
+                     			mytable += ' </tbody></table> </li></div>';
+                     }		
+                     document.write(mytable);
+                     
+                     
+                  </script>
+               </ul>
+            </div>
+         </div>
+         
+     <!-- CONTAINERS ENDS HERE -->
+         
+ 
+ 
+ 
+ 
+ 
+         
+     <!--  Master Starts Here, it is empty. It will be filled by the containers "checkbox" -->
+         
+ 
+            <div class="navigation">
+               <div id = "master">
+                  <div id ="table-scroll" class="linked">
+                    <table class="table">  <caption>  Master Controller </caption>
+                     </table>
+                 
+               </div>
+            </div>     
+      </div>
+      </div>
+     <!-- Master Controller ENDS HERE! -->
+     
 
+     
+     
+     
+     <!-- Button to Add New Property to the master controller -->
+     
+      <div align="center">
+         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-plus"></span> Add New Property To Master Controller</button>
+      </div>
+      
+    <!-- Button to Add New Property ENDS HERE. It redirects to the MODAL -->  
+      
+      
+      
+      
+      
+      
+    <!-- MODAL (Add new properties and add new property names) -->
+      
+      <div id="id01" class="modal">
+         <form class="modal-content animate" action="#">
+            <div class="container">
+               <div class="form-group">
+                  <label for="sel1">Property name:</label>
+                  <select class="form-control" id="sel1" name="property_name" >
+                     <option>destination</option>
+                     <option>address</option>
+                     <option>category</option>
+                     <option>website</option>
+                     <option>latitude</option>
+                     <option>longitude</option>
+                  </select>
+               </div>
+               <label><b>New Property for the Master Controller</b></label>
+               <input type="text"  name="property_value" required maxlength="140">
+               <div align="center">
+                  <button type="button" onclick="modal_validator(property_name, property_value)"  >Submit</button>
+               </div>
+            </div>
+            <div align="center">
+               <div class="container">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+               </div>
+            </div>
+         </form>
+      </div>
+      
+     <!-- MODAL ENDS HERE! -->
+      
+      
+      
+      
+      
+      
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.bxslider.min.js"></script>
+      <script type="text/javascript">
+       
+      $("input[maxlength]").each(function() {
+    	    var $this = $(this);
+    	    var maxLength = parseInt($this.attr('maxlength'));
+    	    $this.attr('maxlength', null);
+    	    
+    	    var el = $("<span class=\"character-count\">" + maxLength + "</span>");
+    	    el.insertAfter($this);
+    	    
+    	    $this.bind('keyup', function() {
+    	        var cc = $this.val().length;
+    	        
+    	        el.text(maxLength - cc);
+    	        
+    	        if(maxLength < cc) {
+    	            el.css('color', 'red');
+    	        } else {
+    	            el.css('color', null);
+    	        }
+    	    });
+    	});
+      
+      //Get the modal
+           var modal = document.getElementById('id01');
+         
+           // When the user clicks anywhere outside of the modal, close it
+           window.onclick = function(event) {
+               if (event.target == modal) {
+                   modal.style.display = "none";
+               }
+           }
+        
+           
+           
+           // BXslider  onReady
+           
+           $(document).on('ready', function() {
+               	 
+         	  $('.bxslider').bxSlider({
+         		  slideWidth: 400,
+         		  minSlides: 3,
+         		  maxSlides: 2,
+         		  slideMargin: 10,
+         		  infiniteLoop: false,
+         		  hideControlOnEnd: true
+         	  });
+         
+         	 
+           });
+      
+           
+           
+           
+           var i = 0 ; //This iterator is used for creating new IDs for the Master when using Modals. The ID is:      i + new    .This could be better, of course.      
+           function modal_validator(string1, string2) {   
+            
+            if(add_to_list(string1) == -1){
+         			alert("It already exists. Remove first the property for overwrite.") ;   
+         		return 0;
+            }
+            if (string2['value']){
+         	   
+         	   
+         	  		 $('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
+         	  	//	 $('<tr data-index="'+ i +'new"><td><input type="checkbox" class="' + string1['value'] + '" checked> '+ string2['value'] + '</td></tr>').appendTo("#master_properties table");
+	  
+         	  		 i++;
+         	   	 		  document.getElementById('id01').style.display='none';
+                		  $("#containers input." + string1['value']).attr('disabled', true); //it disables the same property in the containers that it is adding to the master.
+                                                                                             //Ex. If "address" is added to the master, it disables every address on the containers
+            }
+            else{        		   
+         	   
+         	   alert("Please enter a property name."); // Validation if blank space is given 
+         	   remove_from_list(string1['value']);  // Removes from list the property it added in the first if "add_to_list", because even if it does exist, it will add the property to the list
+         	   
+            }
+         	};
+         	
+         
+         	
+         	
+         	$(function(){
+         
+         	    $('.linked').scroll(function(){
+         	        $('.linked').scrollTop($(this).scrollTop());    // Scrollers will scroll at the same time thanks to this functions "linked".
+         	    })
+         
+         	});
+           
 
-   <script type="text/javascript" src="slick/slick.min.js"></script>
-   <script type="text/javascript" src="../header.js"></script>
-   <script type="text/javascript" src="../redips-drag-min.js"></script>
-   <script type="text/javascript" src="../redips-drag-source.js"></script>
-   <script type="text/javascript" src="js/bootstrap.js"></script>
-   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="script.js"></script>
-   <script src="js/jquery.bxslider.min.js"></script>
-
-   
-   
-  <script type="text/javascript">
-
-  
-//Get the modal
-  var modal = document.getElementById('id01');
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-// BXslider and Slicks onReady
-  
-  $(document).on('ready', function() {
-
-	  $('.your-class').slick({
-		    infinite: false
-		  
-	  });
-	  $('.bxslider').bxSlider({
-		  slideWidth: 500,
-		  minSlides: 3,
-		  maxSlides: 2,
-		  slideMargin: 10,
-		  infiniteLoop: false,
-		  hideControlOnEnd: true
-	  });
-
-	 
-  });
-  var i = 0 ;
-
-  function myFunction(string1, string2) {
-	
-		$('<tr data-index="'+ i +'new"><td><input type="checkbox" checked> '+ string2['value'] + '</td></tr>').appendTo("#master table");
-	        i++;
-	        document.getElementById('id01').style.display='none';
-	};
-  
-	$(function(){
-
-	    $('.linked').scroll(function(){
-	        $('.linked').scrollTop($(this).scrollTop());    
-	    })
-
-	});
-  
-  
-  
-  $(document).on('click',function(){
-   $("#master input:checkbox").click(function(){
-		  var index = $(this).closest("tr").attr("data-index"); 
-	      var findRow = $("#master tr[data-index='" + index + "']");
-	      findRow.remove();
-
-	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");
-	      findRowOfContainer.remove();
-	      
-	      
-	  });
-	});
-  
-  $(function(){
-  $("#containers input:checkbox").click(function(){
-    if ($(this).is(":checked"))
-    {
-      $(this).closest("tr").clone().appendTo("#master table");
-    }
-    else
-    {
-      var index = $(this).closest("tr").attr("data-index"); 
-      var findRow = $("#master tr[data-index='" + index + "']");
-      findRow.remove();
-    }
-  });
-});
-
-</script>
-</body>
+         	var lista_de_propiedades = []; // List to know what properties are already inside the master. 
+         
+         	
+         	function add_to_list(string1){ 
+         			
+         			if( lista_de_propiedades.includes( string1['value']) == true ){
+         				return -1;
+         				}
+         			else{
+         				lista_de_propiedades.push( string1['value'] );
+         				//alert(lista_de_propiedades);
+         			}
+         	};
+         	
+         	function remove_from_list(string1){
+             	
+             	lista_de_propiedades.pop(string1);
+        		 //alert(lista_de_propiedades);
+         
+         	};
+         
+         	
+         function add_to_list_containers(string1){                                          //The functions add_to_list and add_to_list_containers will add properties to the list
+           																					// Since containers has a different input, another way of parsing them is needed. They are basically clones for different inputs 
+       	 	if( lista_de_propiedades.includes( string1) == true ){
+         		return -1;
+         		}
+       		 else{
+         		lista_de_propiedades.push( string1 );
+         		//alert(lista_de_propiedades);
+        		 }
+         };
+         
+         	
+         	
+         	
+           $(document).on('click',function(){
+           $("#master input:checkbox").click(function(){            	
+            	  var index = $(this).closest("tr").attr("data-index"); 
+         	      var findRow = $("#master tr[data-index='" + index + "']");
+         	      findRow.remove();
+         		  var findClass = $(this).closest("input").attr("class");
+         	      var findRowOfContainer = $("containers tr[data-index='" + index + "']");          // The functions for checkboxing from containers to master. It gets complicated, but still doable.
+         	      findRowOfContainer.remove();
+            		//alert(findClass);
+         	      lista_de_propiedades.pop(findClass);
+                  $("input." + findClass).attr('disabled', false);
+                  $("input." + findClass).attr('checked', false);
+         	     // alert(lista_de_propiedades);
+         	  });
+         	});                    
+           
+           $(function(){
+           $("#containers input:checkbox").click(function(){
+             if ($(this).is(":checked"))
+             {
+               $(this).closest("tr").clone().appendTo("#master table");
+               var index = $(this).closest("tr").attr("data-index"); 
+               var findRow = $("#master tr[data-index='" + index + "']");
+               var findClass = $(this).closest("input").attr("class");
+               $("#containers input." + findClass).attr('disabled', true);
+               add_to_list_containers(findClass);
+             }
+    
+             
+             //      else //este else no se esta haciendo porque los campos del checkbox son disabled. sigue ahi porsiacaso.
+       //      {
+       //        var index = $(this).closest("tr").attr("data-index"); 
+       //        var findRow = $("#master tr[data-index='" + index + "']");
+       //        findRow.remove();
+      //       }
+    
+           
+           
+           });
+         });
+         
+      </script>
+   </body>
 </html>
