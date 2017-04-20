@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: demo_fundation
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Chrisoname
+Built-By: Abdyel
 Implementation-Vendor-Id: com.truenorthcorporation
-Build-Jdk: 1.8.0_121
+Build-Jdk: 1.8.0_111
 Implementation-URL: http://projects.spring.io/spring-boot/demo/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
