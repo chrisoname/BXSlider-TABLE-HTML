@@ -4,12 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.web.client.RestTemplate;
-
-import com.google.gson.Gson;
-import com.truenorth.foundation.loader.api.request.SaveDestinationRequest;
-import com.truenorth.foundation.loader.api.response.CityData;
 import com.truenorth.foundation.web.api.response.DestinationData;
-import com.truenorth.foundation.loader.utils.Constants;
+import com.truenorth.foundation.web.utils.Constants;
 
 public class NeoClient {
 

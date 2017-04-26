@@ -1,7 +1,5 @@
 package com.truenorth.foundation.web.api.request;
 
-
-
 public class WebsiteRequest {
 	private String website;
 	private String sourceName;

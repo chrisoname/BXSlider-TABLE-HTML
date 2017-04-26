@@ -1,8 +1,6 @@
 package com.truenorth.foundation.web.api.request;
 
-public class UpdateDestinationRequest {
-
-	
+public class UpdateDestinationRequest {	
 	private String destinationName;
 	private String destination;
 	private String fprId;

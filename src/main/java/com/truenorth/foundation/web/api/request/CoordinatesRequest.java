@@ -6,9 +6,7 @@ public class CoordinatesRequest {
 	private double latitude;
 	private double longitude;
 	private String sourceName;
-	
-	
-	
+
 	public double getLatitude() {
 		return latitude;
 	}
