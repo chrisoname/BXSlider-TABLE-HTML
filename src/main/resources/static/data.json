@@ -1,0 +1,516 @@
+[
+  {
+    "destinationName": "Subway",
+    "sourceId": "686d65df-924a-4734-b370-7da939a2dd22",
+    "fprId": "33158f93-5bd7-436c-ba91-2ff67372a8ff",
+    "destinationBusinessHours": "Mon-Thu 6:00-22:00; Fri-Sat 6:00-23:59; Sun 8:00-22:00",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [
+      {
+        "website": "http://www.subway.com",
+        "sourceName": "FACTUAL",
+        "sourceId": "686d65df-924a-4734-b370-7da939a2dd22"
+      }
+    ],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "686d65df-924a-4734-b370-7da939a2dd22",
+        "latitude": 18.40683,
+        "longitude": -66.07687,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "La Cangrejita II",
+    "sourceId": "caeb2c10-c2a0-4079-955f-85e6b92e5e4d",
+    "fprId": "2553c277-f4d8-44c7-9ee9-c2e45be4a3df",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "caeb2c10-c2a0-4079-955f-85e6b92e5e4d",
+        "latitude": 18.44282,
+        "longitude": -66.3997,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Departamento del Trabajo y Recursos Humanos",
+    "sourceId": "ffa86988-f0c0-4b7e-8ea4-2855d78e116e",
+    "fprId": "49bba518-c0bd-4da3-b8cb-b82b8cbaad5f",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Leisure & Recreational"
+      },
+      {
+        "categoryName": "Attraction"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "ffa86988-f0c0-4b7e-8ea4-2855d78e116e",
+        "latitude": 18.47214,
+        "longitude": -66.72246,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Havana Express Corp",
+    "sourceId": "d69db8be-649d-4bac-9c4b-415c2f9aea87",
+    "fprId": "f3b3bf0c-a9e3-43e6-acb4-28ff1e710a2a",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Bakery"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "d69db8be-649d-4bac-9c4b-415c2f9aea87",
+        "latitude": 18.42701,
+        "longitude": -65.97845,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Playa Azul 1005",
+    "sourceId": "e314e513-f407-4dc9-b5b6-1ca24266e4f6",
+    "fprId": "a4bdf2b6-b711-46f5-9cb1-5b0e85147fa3",
+    "destinationBusinessHours": "Open Daily 00:00-23:59",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+   "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Accommodation"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "e314e513-f407-4dc9-b5b6-1ca24266e4f6",
+        "latitude": 18.38072,
+        "longitude": -65.71871,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Taco Maker",
+    "sourceId": "b431974a-3cf4-413d-bd42-f47eff6aca58",
+    "fprId": "fac795ba-2dbf-4c09-92db-0b6bc39360b4",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "b431974a-3cf4-413d-bd42-f47eff6aca58",
+        "latitude": 18.40117,
+        "longitude": -66.04978,
+        "sourceName": null
+      },
+      {
+        "sourceId": "b431974a-3cf4-413d-bd42-f47eff6aca58",
+        "latitude": 18.40117,
+        "longitude": -66.04978,
+        "sourceName": null
+     }
+    ]
+  },
+  {
+    "destinationName": "Subway",
+    "sourceId": "601527ca-4c67-4c9b-b479-bfc1c10182d1",
+    "fprId": "77fe8ef1-201e-48e9-bab1-00a2f80122a5",
+    "destinationBusinessHours": "Mon-Sat 6:00-23:00; Sun 6:58-23:00",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [
+      {
+        "website": "http://www.subway.com",
+        "sourceName": "FACTUAL",
+        "sourceId": "601527ca-4c67-4c9b-b479-bfc1c10182d1"
+      }
+    ],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "601527ca-4c67-4c9b-b479-bfc1c10182d1",
+        "latitude": 18.1726,
+        "longitude": -67.1498,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "El Hotelito at The Rainforest Experience Farm",
+    "sourceId": "9050eb93-724c-4467-b196-7e65548e2676",
+    "fprId": "49141119-9747-4b75-a01a-c06fba571403",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [
+      {
+        "website": "http://www.yunquehotelito.com",
+        "sourceName": "FACTUAL",
+        "sourceId": "f56dd11c-bb18-4c97-92bb-f03d87367de5"
+      }
+    ],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Accommodation"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "f56dd11c-bb18-4c97-92bb-f03d87367de5",
+        "latitude": 18.3108,
+        "longitude": -65.70539,
+        "sourceName": null
+      },
+      {
+        "sourceId": "f56dd11c-bb18-4c97-92bb-f03d87367de5",
+        "latitude": 18.3108,
+        "longitude": -65.70539,
+        "sourceName": null
+      },
+      {
+        "sourceId": "9050eb93-724c-4467-b196-7e65548e2676",
+        "latitude": 18.3108,
+        "longitude": -65.70539,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Tostado",
+    "sourceId": "a0d8b064-8782-4214-b88c-2eb1d0d855b2",
+    "fprId": "1fa844cb-a44b-4afd-9230-1584da7395a4",
+    "destinationBusinessHours": "Mon-Thu 8:00-16:00; Sat-Sun 10:00-15:00",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "a0d8b064-8782-4214-b88c-2eb1d0d855b2",
+        "latitude": 18.50898,
+        "longitude": -66.6192,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Sizzler",
+    "sourceId": "c38ff2ae-0916-4d59-ac7f-f3f8d9368f71",
+    "fprId": "e11fcee6-35d0-4ad1-8115-daf87a72ac6d",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "c38ff2ae-0916-4d59-ac7f-f3f8d9368f71",
+        "latitude": 18.20985,
+        "longitude": -67.2005,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Shanghai Restaurant",
+    "sourceId": "b4163bc2-0ed6-48e5-bcd3-43d9c7e1c52c",
+    "fprId": "8ace46f0-a2e2-497e-8319-4dabd037e2e2",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "b4163bc2-0ed6-48e5-bcd3-43d9c7e1c52c",
+        "latitude": 18.46633,
+        "longitude": -66.10572,
+        "sourceName": null
+      },
+      {
+        "sourceId": "b4163bc2-0ed6-48e5-bcd3-43d9c7e1c52c",
+        "latitude": 18.46633,
+        "longitude": -66.10572,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Cafeteria La Rapidita",
+    "sourceId": "4ab2be51-b24d-4161-aa14-ad8e7dd7e6cf",
+    "fprId": "b83d16dc-d33c-4c4f-8a36-30a2ad88eaf6",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "4ab2be51-b24d-4161-aa14-ad8e7dd7e6cf",
+        "latitude": 18.40117,
+        "longitude": -66.04978,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "La Cangrejita II",
+    "sourceId": "caeb2c10-c2a0-4079-955f-85e6b92e5e4d",
+    "fprId": "15d2d727-8cda-445f-8737-25ff03bcfb4a",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "caeb2c10-c2a0-4079-955f-85e6b92e5e4d",
+        "latitude": 18.44282,
+        "longitude": -66.3997,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "La Chiwinha",
+    "sourceId": "54b513c1-d68f-4552-b198-d1c0b430a9cd",
+    "fprId": "f02caea2-d8e5-41ce-9642-784f4c0b70df",
+    "destinationBusinessHours": "",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [
+      {
+        "website": "http://www.lachiwinha.com",
+        "sourceName": "FACTUAL",
+        "sourceId": "54b513c1-d68f-4552-b198-d1c0b430a9cd"
+      }
+    ],
+    "emails": [
+      {
+        "email": "comerciojusto@lachiwinha.com",
+        "emailPrivacy": null,
+        "sourceName": "FACTUAL",
+        "sourceId": "54b513c1-d68f-4552-b198-d1c0b430a9cd"
+      }
+    ],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "54b513c1-d68f-4552-b198-d1c0b430a9cd",
+        "latitude": 18.40015,
+        "longitude": -66.05302,
+        "sourceName": null
+      }
+    ]
+  },
+  {
+    "destinationName": "Tostado",
+    "sourceId": "a0d8b064-8782-4214-b88c-2eb1d0d856b2",
+    "fprId": "c716d27c-f20d-4af8-891e-0c5a9a60df69",
+    "destinationBusinessHours": "Mon-Thu 8:00-16:00; Sat-Sun 10:00-15:00",
+    "curatorNode": false,
+    "mediaLinks": [],
+    "themes": [],
+    "thingsToDo": [],
+    "facility": [],
+    "amenities": [],
+    "websites": [],
+    "emails": [],
+    "categories": [
+      {
+        "categoryName": "Gastronomy"
+      },
+      {
+        "categoryName": "Restaurant"
+      }
+    ],
+    "attributes": [],
+    "coordinates": [
+      {
+        "sourceId": "a0d8b064-8782-4214-b88c-2eb1d0d856b2",
+        "latitude": 18.50898,
+        "longitude": -66.6192,
+        "sourceName": null
+      }
+    ]
+  }
+]
