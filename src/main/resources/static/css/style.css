@@ -3,6 +3,10 @@ body {
 	font-family: arial;
 	margin: 0px; /* for IE6 / IE7 */
 }
+
+
+
+/*
 .head-area{width:100%; overflow:hidden;}
 .header{float:left;}
 .navigation{overflow:hidden; }
@@ -11,7 +15,11 @@ body {
 .head-area{clear:both;}
 /* make drag container visible */
 
+*/
 
+.bx-wrapper, .bx-viewport {
+    height: 100px !important; 
+}
 
 	
 	/* Full-width input fields */
@@ -101,7 +109,7 @@ span.psw {
     font-weight: bold;
 }
 #table-scroll, #table-scroll2, #table-scroll3 {
-  height:200px;
+  height:250px;
   overflow:auto;  
   margin-top:20px;
 }
