@@ -6,10 +6,9 @@
       <title>Foundation</title>
       <meta charset="UTF-8">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     
-	      <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
-     <!--    <link rel="stylesheet" href="css/bootstrap.css" media="screen"> -->
-          <link rel="stylesheet" href="css/jquery.bxslider.css" media="screen" /> 
-      
+	  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+      <link rel="stylesheet" href="css/bootstrap.css" media="screen"> 
+      <link rel="stylesheet" href="css/jquery.bxslider.css" media="screen" /> 
    </head>
   
   
@@ -61,7 +60,7 @@ var obj = JSON.parse(data);
                   <script>
                      var mytable;
                      
-                     for (var i = 0;  i <  1 //Object.keys(obj).length  
+                     for (var i = 0;  i <  Object.keys(obj).length  
                      ;i ++){	
                     	 		//alert( obj[0] );
                   			   	mytable += '<div id ="table-scroll" class="linked" ><li><table class="table" >';		
@@ -262,7 +261,8 @@ var obj = JSON.parse(data);
          	    startSlide: 0,
          	    hideControlOnEnd: false,
          	    slideWidth: 300,
-         	    auto: true
+         	    auto: true,
+         	    controls: false
          		 
          		 
          	  });
@@ -358,10 +358,10 @@ var obj = JSON.parse(data);
 			//  console.log(JSON.stringify(myJson));
 			  
 			  
-			  var table =  document.getElementById('master');
-			  var tableTr = table.getElementsByTagName('tr');
-			  var tableInput = table.getElementsByTagName('input');
-			  var cells = table.getElementsByTagName('td');
+				var table =  document.getElementById('master');
+				var tableTr = table.getElementsByTagName('tr');
+				var tableInput = table.getElementsByTagName('input');
+				var cells = table.getElementsByTagName('td');
 			  
 			//  alert(tableInput[0].value);  
 			//  alert(cells[0].className);  
@@ -369,10 +369,11 @@ var obj = JSON.parse(data);
 		//	alert(tableInput.length);
 			
 			
-			var catCount = 0;
-			var webCount = 0;
-			var emaCount = 0;
-			var phoCount = 0;
+				var catCount = 0;
+				var webCount = 0;
+				var emaCount = 0;
+				var phoCount = 0;
+		
 			for(var i = 0; i < tableInput.length;  i++  ){
 				if (cells[i].className == "destination"){
 			 		myJson["destinationName"]= tableInput[i].value ;
